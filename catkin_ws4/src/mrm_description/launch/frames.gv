@@ -1,0 +1,15 @@
+digraph G {
+"iris::base_link" -> "hokuyo_sensor_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 493.471 sec old)\nBuffer length: 0.000 sec\n"];
+"odom" -> "iris::base_link"[label="Broadcaster: /odom_pub\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 493.471 sec old)\nBuffer length: 0.000 sec\n"];
+"iris::base_link" -> "iris__iris/ground_truth/odometry_sensorgt_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 493.471 sec old)\nBuffer length: 0.000 sec\n"];
+"iris::base_link" -> "iris__iris/imu_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 493.471 sec old)\nBuffer length: 0.000 sec\n"];
+"map" -> "odom"[label="Broadcaster: /slam_gmapping\nAverage rate: 20.294 Hz\nMost recent transform: 493.480 ( -0.009 sec old)\nBuffer length: 3.400 sec\n"];
+"iris::base_link" -> "iris__rotor_0"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.294 Hz\nMost recent transform: 493.439 ( 0.032 sec old)\nBuffer length: 3.400 sec\n"];
+"iris::base_link" -> "iris__rotor_1"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.294 Hz\nMost recent transform: 493.439 ( 0.032 sec old)\nBuffer length: 3.400 sec\n"];
+"iris::base_link" -> "iris__rotor_2"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.294 Hz\nMost recent transform: 493.439 ( 0.032 sec old)\nBuffer length: 3.400 sec\n"];
+"iris::base_link" -> "iris__rotor_3"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.294 Hz\nMost recent transform: 493.439 ( 0.032 sec old)\nBuffer length: 3.400 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 493.471"[ shape=plaintext ] ;
+ }->"map";
+}

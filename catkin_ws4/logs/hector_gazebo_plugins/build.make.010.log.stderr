@@ -1,0 +1,24 @@
+make[2]: *** No rule to make target '/usr/lib/x86_64-linux-gnu/libsdformat9.so.9.7.0', needed by '/home/eyup/catkin_ws4/devel/.private/hector_gazebo_plugins/lib/libgazebo_ros_force_based_move.so'.  Stop.
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** No rule to make target '/usr/lib/x86_64-linux-gnu/libsdformat9.so.9.7.0', needed by '/home/eyup/catkin_ws4/devel/.private/hector_gazebo_plugins/lib/libdiffdrive_plugin_multi_wheel.so'.  Stop.
+make[2]: *** Waiting for unfinished jobs....
+In file included from [01m[K/usr/include/gazebo-11/gazebo/common/common.hh:8[m[K,
+                 from [01m[K/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_gazebo/hector_gazebo_plugins/include/hector_gazebo_plugins/diffdrive_plugin_multi_wheel.h:80[m[K,
+                 from [01m[K/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_gazebo/hector_gazebo_plugins/src/diffdrive_plugin_multi_wheel.cpp:78[m[K:
+[01m[K/usr/include/gazebo-11/gazebo/common/Battery.hh:25:10:[m[K [01;31m[Kfatal error: [m[Ksdf/sdf.hh: No such file or directory
+   25 | #include [01;31m[K"sdf/sdf.hh"[m[K
+      |          [01;31m[K^~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/diffdrive_plugin_multi_wheel.dir/build.make:63: CMakeFiles/diffdrive_plugin_multi_wheel.dir/src/diffdrive_plugin_multi_wheel.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:368: CMakeFiles/diffdrive_plugin_multi_wheel.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+In file included from [01m[K/usr/include/gazebo-11/gazebo/common/common.hh:8[m[K,
+                 from [01m[K/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_gazebo/hector_gazebo_plugins/include/hector_gazebo_plugins/gazebo_ros_force_based_move.h:33[m[K,
+                 from [01m[K/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_gazebo/hector_gazebo_plugins/src/gazebo_ros_force_based_move.cpp:26[m[K:
+[01m[K/usr/include/gazebo-11/gazebo/common/Battery.hh:25:10:[m[K [01;31m[Kfatal error: [m[Ksdf/sdf.hh: No such file or directory
+   25 | #include [01;31m[K"sdf/sdf.hh"[m[K
+      |          [01;31m[K^~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/gazebo_ros_force_based_move.dir/build.make:63: CMakeFiles/gazebo_ros_force_based_move.dir/src/gazebo_ros_force_based_move.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:341: CMakeFiles/gazebo_ros_force_based_move.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,102 @@
+In file included from /home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:29:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/include/hector_quadrotor_controller/quadrotor_hardware_gazebo.h:96:11: error: ‘math’ in namespace ‘gazebo’ does not name a type
+   96 |   gazebo::math::Pose gz_pose_;
+      |           ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/include/hector_quadrotor_controller/quadrotor_hardware_gazebo.h:97:11: error: ‘math’ in namespace ‘gazebo’ does not name a type
+   97 |   gazebo::math::Vector3 gz_velocity_, gz_acceleration_, gz_angular_velocity_;
+      |           ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp: In member function ‘virtual bool hector_quadrotor_controller_gazebo::QuadrotorHardwareSim::initSim(const string&, ros::NodeHandle, gazebo::physics::ModelPtr, const urdf::Model*, std::vector<transmission_interface::TransmissionInfo>)’:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:60:34: error: ‘class gazebo::physics::World’ has no member named ‘GetPhysicsEngine’; did you mean ‘SetPhysicsEnabled’?
+   60 |   physics_ = model_->GetWorld()->GetPhysicsEngine();
+      |                                  ^~~~~~~~~~~~~~~~
+      |                                  SetPhysicsEnabled
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp: In member function ‘virtual bool hector_quadrotor_controller_gazebo::QuadrotorHardwareSim::getMassAndInertia(double&, double*)’:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:111:32: error: ‘class gazebo::physics::Inertial’ has no member named ‘GetMass’; did you mean ‘SetMass’?
+  111 |   mass = link_->GetInertial()->GetMass();
+      |                                ^~~~~~~
+      |                                SetMass
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:112:11: error: ‘gazebo::math’ has not been declared
+  112 |   gazebo::math::Vector3 Inertia = link_->GetInertial()->GetPrincipalMoments();
+      |           ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:113:16: error: ‘Inertia’ was not declared in this scope; did you mean ‘sdf::v9::Inertia’?
+  113 |   inertia[0] = Inertia.x;
+      |                ^~~~~~~
+      |                sdf::v9::Inertia
+In file included from /usr/include/sdformat-9.7/sdf/Param.hh:38,
+                 from /usr/include/sdformat-9.7/sdf/Element.hh:28,
+                 from /usr/include/sdformat-9.7/sdf/Actor.hh:25,
+                 from /usr/include/sdformat-9.7/sdf/sdf.hh:2,
+                 from /usr/include/gazebo-11/gazebo/physics/State.hh:26,
+                 from /usr/include/gazebo-11/gazebo/physics/ModelState.hh:28,
+                 from /usr/include/gazebo-11/gazebo/physics/Model.hh:29,
+                 from /usr/include/gazebo-11/gazebo/physics/Actor.hh:27,
+                 from /usr/include/gazebo-11/gazebo/physics/physics.hh:2,
+                 from /opt/ros/noetic/include/gazebo_ros_control/robot_hw_sim.h:45,
+                 from /home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/include/hector_quadrotor_controller/quadrotor_hardware_gazebo.h:32,
+                 from /home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:29:
+/usr/include/sdformat-9.7/sdf/Types.hh:209:26: note: ‘sdf::v9::Inertia’ declared here
+  209 |   class SDFORMAT_VISIBLE Inertia
+      |                          ^~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp: In member function ‘virtual void hector_quadrotor_controller_gazebo::QuadrotorHardwareSim::readSim(ros::Time, ros::Duration)’:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:151:3: error: ‘gz_pose_’ was not declared in this scope; did you mean ‘pose_’?
+  151 |   gz_pose_             =  link_->GetWorldPose();
+      |   ^~~~~~~~
+      |   pose_
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:151:34: error: ‘class gazebo::physics::Link’ has no member named ‘GetWorldPose’; did you mean ‘SetWorldPose’?
+  151 |   gz_pose_             =  link_->GetWorldPose();
+      |                                  ^~~~~~~~~~~~
+      |                                  SetWorldPose
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:152:3: error: ‘gz_acceleration_’ was not declared in this scope; did you mean ‘acceleration_’?
+  152 |   gz_acceleration_     = ((link_->GetWorldLinearVel() - gz_velocity_) + acceleration_time_constant * gz_acceleration_) / (period.toSec() + acceleration_time_constant);
+      |   ^~~~~~~~~~~~~~~~
+      |   acceleration_
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:152:35: error: ‘class gazebo::physics::Link’ has no member named ‘GetWorldLinearVel’; did you mean ‘WorldLinearVel’?
+  152 |   gz_acceleration_     = ((link_->GetWorldLinearVel() - gz_velocity_) + acceleration_time_constant * gz_acceleration_) / (period.toSec() + acceleration_time_constant);
+      |                                   ^~~~~~~~~~~~~~~~~
+      |                                   WorldLinearVel
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:152:57: error: ‘gz_velocity_’ was not declared in this scope
+  152 |   gz_acceleration_     = ((link_->GetWorldLinearVel() - gz_velocity_) + acceleration_time_constant * gz_acceleration_) / (period.toSec() + acceleration_time_constant);
+      |                                                         ^~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:153:34: error: ‘class gazebo::physics::Link’ has no member named ‘GetWorldLinearVel’; did you mean ‘WorldLinearVel’?
+  153 |   gz_velocity_         =  link_->GetWorldLinearVel();
+      |                                  ^~~~~~~~~~~~~~~~~
+      |                                  WorldLinearVel
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:154:3: error: ‘gz_angular_velocity_’ was not declared in this scope
+  154 |   gz_angular_velocity_ =  link_->GetWorldAngularVel();
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:154:34: error: ‘class gazebo::physics::Link’ has no member named ‘GetWorldAngularVel’; did you mean ‘WorldAngularVel’?
+  154 |   gz_angular_velocity_ =  link_->GetWorldAngularVel();
+      |                                  ^~~~~~~~~~~~~~~~~~
+      |                                  WorldAngularVel
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:183:13: error: ‘gazebo::math’ has not been declared
+  183 |     gazebo::math::Vector3 gz_angular_velocity_body = gz_pose_.rot.RotateVectorReverse(gz_angular_velocity_);
+      |             ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:184:31: error: ‘gz_angular_velocity_body’ was not declared in this scope
+  184 |     imu_.angular_velocity.x = gz_angular_velocity_body.x;
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:188:13: error: ‘gazebo::math’ has not been declared
+  188 |     gazebo::math::Vector3 gz_linear_acceleration_body = gz_pose_.rot.RotateVectorReverse(gz_acceleration_ - physics_->GetGravity());
+      |             ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:189:34: error: ‘gz_linear_acceleration_body’ was not declared in this scope
+  189 |     imu_.linear_acceleration.x = gz_linear_acceleration_body.x;
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp: In member function ‘virtual void hector_quadrotor_controller_gazebo::QuadrotorHardwareSim::writeSim(ros::Time, ros::Duration)’:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:212:15: error: ‘gazebo::math’ has not been declared
+  212 |       gazebo::math::Vector3 force(wrench.wrench.force.x, wrench.wrench.force.y, wrench.wrench.force.z);
+      |               ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:213:15: error: ‘gazebo::math’ has not been declared
+  213 |       gazebo::math::Vector3 torque(wrench.wrench.torque.x, wrench.wrench.torque.y, wrench.wrench.torque.z);
+      |               ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:214:31: error: ‘force’ was not declared in this scope
+  214 |       link_->AddRelativeForce(force);
+      |                               ^~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:215:32: error: ‘torque’ was not declared in this scope
+  215 |       link_->AddRelativeTorque(torque - link_->GetInertial()->GetCoG().Cross(force));
+      |                                ^~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_controller_gazebo/src/quadrotor_hardware_gazebo.cpp:215:63: error: ‘class gazebo::physics::Inertial’ has no member named ‘GetCoG’; did you mean ‘SetCoG’?
+  215 |       link_->AddRelativeTorque(torque - link_->GetInertial()->GetCoG().Cross(force));
+      |                                                               ^~~~~~
+      |                                                               SetCoG
+make[2]: *** [CMakeFiles/hector_quadrotor_controller_gazebo.dir/build.make:63: CMakeFiles/hector_quadrotor_controller_gazebo.dir/src/quadrotor_hardware_gazebo.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:213: CMakeFiles/hector_quadrotor_controller_gazebo.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

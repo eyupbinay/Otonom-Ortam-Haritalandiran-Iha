@@ -1,0 +1,1 @@
+/home/eyup/catkin_ws4/devel/.private/mavros_extras/share/mavros_extras/cmake/mavros_extrasConfig-version.cmake

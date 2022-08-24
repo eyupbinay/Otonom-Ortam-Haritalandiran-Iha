@@ -1,0 +1,7 @@
+digraph G {
+"map" -> "world"[label="Broadcaster: /slam_gmapping\nAverage rate: 20.208 Hz\nMost recent transform: 2817.820 ( -0.012 sec old)\nBuffer length: 4.800 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 2817.808"[ shape=plaintext ] ;
+ }->"map";
+}

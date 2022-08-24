@@ -1,0 +1,210 @@
+In file included from [01m[K/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_aerodynamics.cpp:29[m[K:
+[01m[K/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/include/hector_quadrotor_gazebo_plugins/gazebo_quadrotor_aerodynamics.h:34:10:[m[K [01;31m[Kfatal error: [m[Kgazebo/math/Vector3.hh: No such file or directory
+   34 | #include [01;31m[K<gazebo/math/Vector3.hh>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/build.make:63: CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/src/gazebo_quadrotor_aerodynamics.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:213: CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+In file included from /home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:29:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/include/hector_quadrotor_gazebo_plugins/gazebo_quadrotor_simple_controller.h:88:3: error: ‘math’ does not name a type
+   88 |   math::Pose pose;
+      |   ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/include/hector_quadrotor_gazebo_plugins/gazebo_quadrotor_simple_controller.h:89:3: error: ‘math’ does not name a type
+   89 |   math::Vector3 euler, velocity, acceleration, angular_velocity;
+      |   ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/include/hector_quadrotor_gazebo_plugins/gazebo_quadrotor_simple_controller.h:132:3: error: ‘math’ does not name a type
+  132 |   math::Vector3 inertia;
+      |   ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/include/hector_quadrotor_gazebo_plugins/gazebo_quadrotor_simple_controller.h:135:3: error: ‘math’ does not name a type
+  135 |   math::Vector3 force, torque;
+      |   ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp: In destructor ‘virtual gazebo::GazeboQuadrotorSimpleController::~GazeboQuadrotorSimpleController()’:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:47:18: error: ‘DisconnectWorldUpdateBegin’ is not a member of ‘gazebo::event::Events’
+   47 |   event::Events::DisconnectWorldUpdateBegin(updateConnection);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp: In member function ‘virtual void gazebo::GazeboQuadrotorSimpleController::Load(gazebo::physics::ModelPtr, sdf::v9::ElementPtr)’:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:101:3: error: ‘inertia’ was not declared in this scope
+  101 |   inertia = link->GetInertial()->GetPrincipalMoments();
+      |   ^~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:101:34: error: ‘class gazebo::physics::Inertial’ has no member named ‘GetPrincipalMoments’; did you mean ‘PrincipalMoments’?
+  101 |   inertia = link->GetInertial()->GetPrincipalMoments();
+      |                                  ^~~~~~~~~~~~~~~~~~~
+      |                                  PrincipalMoments
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:102:31: error: ‘class gazebo::physics::Inertial’ has no member named ‘GetMass’; did you mean ‘SetMass’?
+  102 |   mass = link->GetInertial()->GetMass();
+      |                               ^~~~~~~
+      |                               SetMass
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp: In member function ‘void gazebo::GazeboQuadrotorSimpleController::ImuCallback(const ImuConstPtr&)’:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:200:3: error: ‘pose’ was not declared in this scope
+  200 |   pose.rot.Set(imu->orientation.w, imu->orientation.x, imu->orientation.y, imu->orientation.z);
+      |   ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:201:3: error: ‘euler’ was not declared in this scope
+  201 |   euler = pose.rot.GetAsEuler();
+      |   ^~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:202:3: error: ‘angular_velocity’ was not declared in this scope
+  202 |   angular_velocity = pose.rot.RotateVector(math::Vector3(imu->angular_velocity.x, imu->angular_velocity.y, imu->angular_velocity.z));
+      |   ^~~~~~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:202:44: error: ‘math’ has not been declared
+  202 |   angular_velocity = pose.rot.RotateVector(math::Vector3(imu->angular_velocity.x, imu->angular_velocity.y, imu->angular_velocity.z));
+      |                                            ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp: In member function ‘void gazebo::GazeboQuadrotorSimpleController::StateCallback(const OdometryConstPtr&)’:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:207:3: error: ‘math’ has not been declared
+  207 |   math::Vector3 velocity1(velocity);
+      |   ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:210:5: error: ‘pose’ was not declared in this scope
+  210 |     pose.pos.Set(state->pose.pose.position.x, state->pose.pose.position.y, state->pose.pose.position.z);
+      |     ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:212:5: error: ‘euler’ was not declared in this scope
+  212 |     euler = pose.rot.GetAsEuler();
+      |     ^~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:213:5: error: ‘angular_velocity’ was not declared in this scope
+  213 |     angular_velocity.Set(state->twist.twist.angular.x, state->twist.twist.angular.y, state->twist.twist.angular.z);
+      |     ^~~~~~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:216:3: error: ‘velocity’ was not declared in this scope
+  216 |   velocity.Set(state->twist.twist.linear.x, state->twist.twist.linear.y, state->twist.twist.linear.z);
+      |   ^~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:222:5: error: ‘acceleration’ was not declared in this scope
+  222 |     acceleration = (velocity - velocity1) / dt;
+      |     ^~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:222:32: error: ‘velocity1’ was not declared in this scope
+  222 |     acceleration = (velocity - velocity1) / dt;
+      |                                ^~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:224:5: error: ‘acceleration’ was not declared in this scope
+  224 |     acceleration.Set();
+      |     ^~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp: In member function ‘virtual void gazebo::GazeboQuadrotorSimpleController::Update()’:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:253:7: error: ‘pose’ was not declared in this scope
+  253 |       pose = link->GetWorldPose();
+      |       ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:253:20: error: ‘class gazebo::physics::Link’ has no member named ‘GetWorldPose’; did you mean ‘SetWorldPose’?
+  253 |       pose = link->GetWorldPose();
+      |                    ^~~~~~~~~~~~
+      |                    SetWorldPose
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:254:7: error: ‘angular_velocity’ was not declared in this scope
+  254 |       angular_velocity = link->GetWorldAngularVel();
+      |       ^~~~~~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:254:32: error: ‘class gazebo::physics::Link’ has no member named ‘GetWorldAngularVel’; did you mean ‘WorldAngularVel’?
+  254 |       angular_velocity = link->GetWorldAngularVel();
+      |                                ^~~~~~~~~~~~~~~~~~
+      |                                WorldAngularVel
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:255:7: error: ‘euler’ was not declared in this scope
+  255 |       euler = pose.rot.GetAsEuler();
+      |       ^~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:258:7: error: ‘acceleration’ was not declared in this scope
+  258 |       acceleration = (link->GetWorldLinearVel() - velocity) / dt;
+      |       ^~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:258:29: error: ‘class gazebo::physics::Link’ has no member named ‘GetWorldLinearVel’; did you mean ‘WorldLinearVel’?
+  258 |       acceleration = (link->GetWorldLinearVel() - velocity) / dt;
+      |                             ^~~~~~~~~~~~~~~~~
+      |                             WorldLinearVel
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:258:51: error: ‘velocity’ was not declared in this scope
+  258 |       acceleration = (link->GetWorldLinearVel() - velocity) / dt;
+      |                                                   ^~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:259:24: error: ‘class gazebo::physics::Link’ has no member named ‘GetWorldLinearVel’; did you mean ‘WorldLinearVel’?
+  259 |       velocity = link->GetWorldLinearVel();
+      |                        ^~~~~~~~~~~~~~~~~
+      |                        WorldLinearVel
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:267:104: error: ‘velocity’ was not declared in this scope
+  267 |       } else if (running_ && controllers_.velocity_z.i < -1.0 && velocity_command_.linear.z < -0.1 && (velocity.z > -0.1 && velocity.z < 0.1)) {
+      |                                                                                                        ^~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:282:5: error: ‘math’ has not been declared
+  282 |     math::Vector3 gravity_body = pose.rot.RotateVector(world->GetPhysicsEngine()->GetGravity());
+      |     ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:283:22: error: ‘gravity_body’ was not declared in this scope
+  283 |     double gravity = gravity_body.GetLength();
+      |                      ^~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:284:53: error: ‘class gazebo::physics::World’ has no member named ‘GetPhysicsEngine’; did you mean ‘SetPhysicsEnabled’?
+  284 |     double load_factor = gravity * gravity / world->GetPhysicsEngine()->GetGravity().Dot(gravity_body);  // Get gravity
+      |                                                     ^~~~~~~~~~~~~~~~
+      |                                                     SetPhysicsEnabled
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:287:5: error: ‘math’ has not been declared
+  287 |     math::Quaternion heading_quaternion(cos(euler.z/2),0,0,sin(euler.z/2));
+      |     ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:288:5: error: ‘math’ has not been declared
+  288 |     math::Vector3 velocity_xy = heading_quaternion.RotateVectorReverse(velocity);
+      |     ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:289:5: error: ‘math’ has not been declared
+  289 |     math::Vector3 acceleration_xy = heading_quaternion.RotateVectorReverse(acceleration);
+      |     ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:290:5: error: ‘math’ has not been declared
+  290 |     math::Vector3 angular_velocity_body = pose.rot.RotateVectorReverse(angular_velocity);
+      |     ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:293:5: error: ‘force’ was not declared in this scope
+  293 |     force.Set(0.0, 0.0, 0.0);
+      |     ^~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:294:5: error: ‘torque’ was not declared in this scope
+  294 |     torque.Set(0.0, 0.0, 0.0);
+      |     ^~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:296:90: error: ‘velocity_xy’ was not declared in this scope
+  296 |       double pitch_command =  controllers_.velocity_x.update(velocity_command_.linear.x, velocity_xy.x, acceleration_xy.x, dt) / gravity;
+      |                                                                                          ^~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:296:105: error: ‘acceleration_xy’ was not declared in this scope
+  296 |       double pitch_command =  controllers_.velocity_x.update(velocity_command_.linear.x, velocity_xy.x, acceleration_xy.x, dt) / gravity;
+      |                                                                                                         ^~~~~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:298:18: error: ‘inertia’ was not declared in this scope
+  298 |       torque.x = inertia.x *  controllers_.roll.update(roll_command, euler.x, angular_velocity_body.x, dt);
+      |                  ^~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:298:70: error: ‘euler’ was not declared in this scope
+  298 |       torque.x = inertia.x *  controllers_.roll.update(roll_command, euler.x, angular_velocity_body.x, dt);
+      |                                                                      ^~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:298:79: error: ‘angular_velocity_body’ was not declared in this scope
+  298 |       torque.x = inertia.x *  controllers_.roll.update(roll_command, euler.x, angular_velocity_body.x, dt);
+      |                                                                               ^~~~~~~~~~~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:302:84: error: ‘angular_velocity’ was not declared in this scope
+  302 |       torque.z = inertia.z *  controllers_.yaw.update(velocity_command_.angular.z, angular_velocity.z, 0, dt);
+      |                                                                                    ^~~~~~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:303:91: error: ‘velocity’ was not declared in this scope
+  303 |       force.z  = mass      * (controllers_.velocity_z.update(velocity_command_.linear.z,  velocity.z, acceleration.z, dt) + load_factor * gravity);
+      |                                                                                           ^~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:303:103: error: ‘acceleration’ was not declared in this scope
+  303 |       force.z  = mass      * (controllers_.velocity_z.update(velocity_command_.linear.z,  velocity.z, acceleration.z, dt) + load_factor * gravity);
+      |                                                                                                       ^~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:339:26: error: ‘force’ was not declared in this scope
+  339 |   link->AddRelativeForce(force);
+      |                          ^~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:340:27: error: ‘torque’ was not declared in this scope
+  340 |   link->AddRelativeTorque(torque - link->GetInertial()->GetCoG().Cross(force));
+      |                           ^~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:340:57: error: ‘class gazebo::physics::Inertial’ has no member named ‘GetCoG’; did you mean ‘SetCoG’?
+  340 |   link->AddRelativeTorque(torque - link->GetInertial()->GetCoG().Cross(force));
+      |                                                         ^~~~~~
+      |                                                         SetCoG
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp: In member function ‘virtual void gazebo::GazeboQuadrotorSimpleController::Reset()’:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:354:3: error: ‘force’ was not declared in this scope
+  354 |   force.Set();
+      |   ^~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:355:3: error: ‘torque’ was not declared in this scope
+  355 |   torque.Set();
+      |   ^~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:358:3: error: ‘pose’ was not declared in this scope
+  358 |   pose.Reset();
+      |   ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:359:3: error: ‘velocity’ was not declared in this scope
+  359 |   velocity.Set();
+      |   ^~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:360:3: error: ‘angular_velocity’ was not declared in this scope
+  360 |   angular_velocity.Set();
+      |   ^~~~~~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:361:3: error: ‘acceleration’ was not declared in this scope
+  361 |   acceleration.Set();
+      |   ^~~~~~~~~~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_quadrotor_simple_controller.cpp:362:3: error: ‘euler’ was not declared in this scope
+  362 |   euler.Set();
+      |   ^~~~~
+make[2]: *** [CMakeFiles/hector_gazebo_quadrotor_simple_controller2.dir/build.make:63: CMakeFiles/hector_gazebo_quadrotor_simple_controller2.dir/src/gazebo_quadrotor_simple_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1752: CMakeFiles/hector_gazebo_quadrotor_simple_controller2.dir/all] Error 2
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_ros_baro.cpp: In member function ‘virtual void gazebo::GazeboRosBaro::Update()’:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_ros_baro.cpp:136:34: error: ‘class gazebo::physics::World’ has no member named ‘GetSimTime’; did you mean ‘SetSimTime’?
+  136 |   common::Time sim_time = world->GetSimTime();
+      |                                  ^~~~~~~~~~
+      |                                  SetSimTime
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_ros_baro.cpp:139:3: error: ‘math’ has not been declared
+  139 |   math::Pose pose = link->GetWorldPose();
+      |   ^~~~
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_quadrotor/hector_quadrotor_gazebo_plugins/src/gazebo_ros_baro.cpp:140:33: error: ‘pose’ was not declared in this scope
+  140 |   double height = sensor_model_(pose.pos.z, dt);
+      |                                 ^~~~
+make[2]: *** [CMakeFiles/hector_gazebo_ros_baro2.dir/build.make:63: CMakeFiles/hector_gazebo_ros_baro2.dir/src/gazebo_ros_baro.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:2184: CMakeFiles/hector_gazebo_ros_baro2.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

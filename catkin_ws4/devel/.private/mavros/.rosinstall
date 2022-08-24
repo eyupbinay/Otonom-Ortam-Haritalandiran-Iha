@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/eyup/catkin_ws4/devel/.private/mavros/setup.sh

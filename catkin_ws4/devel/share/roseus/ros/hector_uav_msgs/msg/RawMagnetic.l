@@ -1,0 +1,1 @@
+/home/eyup/catkin_ws4/devel/.private/hector_uav_msgs/share/roseus/ros/hector_uav_msgs/msg/RawMagnetic.l

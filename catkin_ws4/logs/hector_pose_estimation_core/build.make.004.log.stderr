@@ -1,0 +1,38 @@
+In file included from /home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/include/hector_pose_estimation/system_model.h:34,
+                 from /home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/include/hector_pose_estimation/system.h:32,
+                 from /home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/include/hector_pose_estimation/pose_estimation.h:34,
+                 from /home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/src/pose_estimation.cpp:29:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/include/hector_pose_estimation/input.h: In instantiation of ‘bool hector_pose_estimation::Input_<_Dimension>::hasVariance() const [with int _Dimension = 6]’:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/include/hector_pose_estimation/input.h:82:16:   required from here
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/include/hector_pose_estimation/input.h:82:45: error: cannot convert ‘const boost::shared_ptr<Eigen::Matrix<double, 6, 6, 0, 6, 6> >’ to ‘bool’ in return
+   82 |   virtual bool hasVariance() const { return variance_; }
+      |                                             ^~~~~~~~~
+      |                                             |
+      |                                             const boost::shared_ptr<Eigen::Matrix<double, 6, 6, 0, 6, 6> >
+make[2]: *** [CMakeFiles/hector_pose_estimation.dir/build.make:76: CMakeFiles/hector_pose_estimation.dir/src/pose_estimation.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from /home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/include/hector_pose_estimation/system_model.h:34,
+                 from /home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/include/hector_pose_estimation/system/generic_quaternion_system_model.h:32,
+                 from /home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/src/system/generic_quaternion_system_model.cpp:29:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/include/hector_pose_estimation/input.h: In instantiation of ‘bool hector_pose_estimation::Input_<_Dimension>::hasVariance() const [with int _Dimension = 6]’:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/include/hector_pose_estimation/input.h:82:16:   required from here
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/include/hector_pose_estimation/input.h:82:45: error: cannot convert ‘const boost::shared_ptr<Eigen::Matrix<double, 6, 6, 0, 6, 6> >’ to ‘bool’ in return
+   82 |   virtual bool hasVariance() const { return variance_; }
+      |                                             ^~~~~~~~~
+      |                                             |
+      |                                             const boost::shared_ptr<Eigen::Matrix<double, 6, 6, 0, 6, 6> >
+make[2]: *** [CMakeFiles/hector_pose_estimation.dir/build.make:167: CMakeFiles/hector_pose_estimation.dir/src/system/generic_quaternion_system_model.cpp.o] Error 1
+In file included from /home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/include/hector_pose_estimation/system_model.h:34,
+                 from /home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/include/hector_pose_estimation/system/generic_quaternion_system_model.h:32,
+                 from /home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/include/hector_pose_estimation/system/ground_vehicle_model.h:33,
+                 from /home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/src/system/ground_vehicle_model.cpp:29:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/include/hector_pose_estimation/input.h: In instantiation of ‘bool hector_pose_estimation::Input_<_Dimension>::hasVariance() const [with int _Dimension = 6]’:
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/include/hector_pose_estimation/input.h:82:16:   required from here
+/home/eyup/catkin_ws4/src/hector_quadrotor_sim/hector_localization/hector_pose_estimation_core/include/hector_pose_estimation/input.h:82:45: error: cannot convert ‘const boost::shared_ptr<Eigen::Matrix<double, 6, 6, 0, 6, 6> >’ to ‘bool’ in return
+   82 |   virtual bool hasVariance() const { return variance_; }
+      |                                             ^~~~~~~~~
+      |                                             |
+      |                                             const boost::shared_ptr<Eigen::Matrix<double, 6, 6, 0, 6, 6> >
+make[2]: *** [CMakeFiles/hector_pose_estimation.dir/build.make:180: CMakeFiles/hector_pose_estimation.dir/src/system/ground_vehicle_model.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:200: CMakeFiles/hector_pose_estimation.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,1 @@
+/home/eyup/catkin_ws4/devel/.private/hector_xacro_tools/share/hector_xacro_tools/cmake/hector_xacro_toolsConfig-version.cmake
